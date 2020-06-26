@@ -1,4 +1,4 @@
-﻿using BloodBankSystem.userBLL;
+using BloodBankSystem.userBLL;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using MessageBox = System.Windows.Forms.MessageBox;
-
+//Data Access Layer
 namespace BloodBankSystem.DAL
 {
     class UserDAL
