@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33E90E2F-859E-4C5D-8204-676396D5C2A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BloodBankSystem</RootNamespace>
+    <AssemblyName>BloodBankSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.13.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DonorBLL.cs" />
+    <Compile Include="Classes\AControl.cs" />
+    <Compile Include="Classes\CircularBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\CircularPic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Control.cs" />
+    <Compile Include="Classes\Control1.cs" />
+    <Compile Include="Classes\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\pasvalidcontrol.cs" />
+    <Compile Include="Classes\RoundBtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\DonorDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="UI\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddDonor.Designer.cs">
+      <DependentUpon>AddDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BecomeDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BecomeDonor.Designer.cs">
+      <DependentUpon>BecomeDonor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ContactU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ContactU.Designer.cs">
+      <DependentUpon>ContactU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeleteBlood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeleteBlood.Designer.cs">
+      <DependentUpon>DeleteBlood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DonorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DonorList.Designer.cs">
+      <DependentUpon>DonorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\mainhome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\mainhome.Designer.cs">
+      <DependentUpon>mainhome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageBloodG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManageBloodG.Designer.cs">
+      <DependentUpon>ManageBloodG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SearchBlood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SearchBlood.Designer.cs">
+      <DependentUpon>SearchBlood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\signin form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\signin form.designer.cs">
+      <DependentUpon>signin form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\bloodbankmanagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\bloodbankmanagement.designer.cs">
+      <DependentUpon>bloodbankmanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordValidation.Designer.cs">
+      <DependentUpon>PasswordValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\SignUpPOPUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignUpPOPUP.Designer.cs">
+      <DependentUpon>SignUpPOPUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\userbLL.cs" />
+    <Compile Include="UI\Upate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Upate.Designer.cs">
+      <DependentUpon>Upate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WBDonor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WBDonor.Designer.cs">
+      <DependentUpon>WBDonor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddDonor.resx">
+      <DependentUpon>AddDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BecomeDonor.resx">
+      <DependentUpon>BecomeDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ContactU.resx">
+      <DependentUpon>ContactU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeleteBlood.resx">
+      <DependentUpon>DeleteBlood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DonorList.resx">
+      <DependentUpon>DonorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\mainhome.resx">
+      <DependentUpon>mainhome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManageBloodG.resx">
+      <DependentUpon>ManageBloodG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SearchBlood.resx">
+      <DependentUpon>SearchBlood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\signin form.resx">
+      <DependentUpon>signin form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\bloodbankmanagement.resx">
+      <DependentUpon>bloodbankmanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordValidation.resx">
+      <DependentUpon>PasswordValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\SignUpPOPUP.resx">
+      <DependentUpon>SignUpPOPUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Upate.resx">
+      <DependentUpon>Upate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WBDonor.resx">
+      <DependentUpon>WBDonor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\circled_chevron_left_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\circled_chevron_right_24px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
